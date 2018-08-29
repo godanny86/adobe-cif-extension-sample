@@ -67,14 +67,9 @@ Exercise 1 - Create a Adobe I/O Hello World Action
 
 ```ruby
 	
-	wsk action invoke -v seat-{YOUR_FIRSTNAME}-{YOUR_LASTNAME}/hello-world --result --param firstName Gary --param lastName Kirsten
+	$ wsk action invoke -v seat-{YOUR_FIRSTNAME}-{YOUR_LASTNAME}/hello-world --result --param firstName Gary --param lastName Kirsten
 	
-	```
-
-	**Expected Output**
-	
-```ruby
-	
+	...
 	REQUEST:
 	[POST]  https://runtime.adobe.io/api/v1/namespaces/<yournamespace>/actions/seat-firstname-lastname/hello-world?blocking=true&result=true
 	Req Headers
@@ -89,6 +84,8 @@ Exercise 1 - Create a Adobe I/O Hello World Action
 	    "OpenWhisk-CLI/1.0 (2018-08-22T01:47:40.732+0000) darwin amd64"
 	  ]
 	}
+	...
+	
 	{
         "payload": "Hello Gary Kristen"
 	}
