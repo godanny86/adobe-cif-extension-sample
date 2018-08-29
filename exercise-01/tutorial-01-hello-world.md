@@ -107,7 +107,14 @@ Exercise 1 - Create a Adobe I/O Hello World Action
 
 	```
 
-9. Good to know: `wsk activation poll` lets you tail the logs	
+9. Good to know: `wsk activation poll` lets you tail the logs. Open a new terminal window and run `wsk activation poll`
+
+10. Return to your original terminal and try invoking the action using the param-file flag and passing the parameters.json file.
+	
+	```ruby
+	wsk action invoke seat-{YOUR_FIRSTNAME}-{YOUR_LASTNAME}/hello-world --result --param-file parameters.json
+
+	```
 		
 10. Overall outcome
 
