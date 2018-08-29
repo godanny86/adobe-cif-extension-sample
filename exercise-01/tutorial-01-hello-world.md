@@ -66,14 +66,15 @@ Exercise 1 - Create a Adobe I/O Hello World Action
 8. Run the same command with `-v` parameter for verbose output:
 
 ```ruby
+	
 	wsk action invoke -v seat-{YOUR_FIRSTNAME}-{YOUR_LASTNAME}/hello-world --result --param firstName Gary --param lastName Kirsten
+	
 	```
-
-You should see that the request is posted to your adobe.io namespace and a response is returned from the serverless runtime.
 
 	**Expected Output**
 	
-	```ruby
+```ruby
+	
 	REQUEST:
 	[POST]  https://runtime.adobe.io/api/v1/namespaces/<yournamespace>/actions/seat-firstname-lastname/hello-world?blocking=true&result=true
 	Req Headers
@@ -91,7 +92,8 @@ You should see that the request is posted to your adobe.io namespace and a respo
 	{
         "payload": "Hello Gary Kristen"
 	}
-	```
+	
+```
 	
 9. Good to know: OpenWhisk Namespace and properties are already deployed for you. Checkout the .wskprop using below command on terminal
 
