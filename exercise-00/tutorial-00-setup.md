@@ -30,7 +30,7 @@ The objective of this exercise is to setup your custom Adobe I/O Runtime namespa
 4. Setup wskprops file 
 ```wsk property set --apihost runtime.adobe.io --auth <Your auth code> --namespace <Your namespace>```
 
-5. In the cloned directory, go to the `customer-deployment` folder.
+5. In the `commerce-cif-magento` directory, go to the `customer-deployment` folder.
 
 6. Copy the `credentials-example.json` file to `credentials.json` file.
 
@@ -57,11 +57,11 @@ The objective of this exercise is to setup your custom Adobe I/O Runtime namespa
 
 8. Update `bindings-namespace` and `customer-namespace` properties in `package.json` file.
 ```
-"customer-namespace": "kmall",
+"customer-namespace": "yournamespace",
 "bindings-namespace": "ccif-core-library",
 ```
 
-9. Run ```npm install; npm run deploy```
+9. From within the `customer-namespace` directory, Run ```npm install; npm run deploy```
 
 10. Confirm that the bindings were successful. 
 
