@@ -62,8 +62,37 @@ Exercise 1 - Create a Adobe I/O Hello World Action
         "payload": "Hello Gary Kristen"
 	}
 	```
+
+8. Run the same command with `-v` parameter for verbose output:
+
+```ruby
 	
-8. Good to know: OpenWhisk Namespace and properties are already deployed for you. Checkout the .wskprop using below command on terminal
+	$ wsk action invoke -v seat-{YOUR_FIRSTNAME}-{YOUR_LASTNAME}/hello-world --result --param firstName Gary --param lastName Kirsten
+	
+	...
+	REQUEST:
+	[POST]  https://runtime.adobe.io/api/v1/namespaces/<yournamespace>/actions/seat-firstname-lastname/hello-world?blocking=true&result=true
+	Req Headers
+	{
+	  "Authorization": [
+	    "Basic **********Namespace auth code="
+	  ],
+	  "Content-Type": [
+	    "application/json"
+	  ],
+	  "User-Agent": [
+	    "OpenWhisk-CLI/1.0 (2018-08-22T01:47:40.732+0000) darwin amd64"
+	  ]
+	}
+	...
+	
+	{
+        "payload": "Hello Gary Kristen"
+	}
+	
+```
+	
+9. Good to know: OpenWhisk Namespace and properties are already deployed for you. Checkout the .wskprop using below command on terminal
 
 	```ruby
 	cat ~/.wskprops
@@ -78,7 +107,14 @@ Exercise 1 - Create a Adobe I/O Hello World Action
 
 	```
 
-9. Good to know: `wsk activation poll` lets you tail the logs	
+9. Good to know: `wsk activation poll` lets you tail the logs. Open a new terminal window and run `wsk activation poll`
+
+10. Return to your original terminal and try invoking the action using the param-file flag and passing the parameters.json file.
+	
+	```ruby
+	wsk action invoke seat-{YOUR_FIRSTNAME}-{YOUR_LASTNAME}/hello-world --result --param-file parameters.json
+
+	```
 		
 10. Overall outcome
 
